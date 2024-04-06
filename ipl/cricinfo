@@ -1,0 +1,43 @@
+import requests
+from PyQt5.QtWidgets import QApplication, QTableView
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
+import sys
+
+# Create a new QApplication
+app = QApplication([])
+
+# Create a QTableView
+view = QTableView()
+
+# Create a QStandardItemModel
+model = QStandardItemModel()
+
+# Set the headers for the QStandardItemModel
+model.setHorizontalHeaderLabels(['Match ID', 'Date', 'Team 1', 'Team 2'])
+
+# Send a GET request to the CricAPI matches endpoint
+response = requests.get('https://api.cricapi.com/v1/match_info?apikey=3eca3450-969f-48dd-9a65-00780e01d10d&id=8f87aa4a-5de2-41ab-8f2c-72ce339adcdd')
+
+# Parse the JSON response
+data = response.json()
+print(data)
+
+
+match_name = data['data']['name']
+# Loop through the matches and add each one to the QStandardItemModel
+#for i, match in enumerate(data['matches']):
+item1 = QStandardItem(match_name)
+model.setItem(0, 0, item1)
+
+
+# Set the model for the QTableView
+view.setModel(model)
+
+# Resize the columns to fit the content
+view.resizeColumnsToContents()
+
+# Show the QTableView
+view.show()
+
+# Start the Qt event loop
+app.exec_()
