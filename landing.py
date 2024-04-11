@@ -14,11 +14,6 @@ def run_code3():
 def run_code4():
     subprocess.call(["python3", "/Users/mathewgeorge/isaiahnba/ipl/iplfromdb.py"])
 
-def run_code5():
-    subprocess.call(["python3", "/Users/mathewgeorge/isaiahnba/players1.py"])
-
-def run_code6():
-    webbrowser.open('http://127.0.0.1:5000')
 
 app = QApplication([])
 
@@ -40,14 +35,6 @@ layout.addWidget(button3)
 button4 = QPushButton('IPL Score retrieval from DB')
 button4.clicked.connect(run_code4)
 layout.addWidget(button4)
-
-# button5 = QPushButton('Start Flask server for NBA players data retrieval')
-# button5.clicked.connect(run_code5)
-# layout.addWidget(button5)
-
-# button6 = QPushButton('web browser example')
-# button6.clicked.connect(run_code6)
-# layout.addWidget(button6)
 
 window.setLayout(layout)
 window.show()

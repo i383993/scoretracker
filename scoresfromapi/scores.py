@@ -10,7 +10,7 @@ ALL_JSON = "/v1/games"
 
 # Define the query parameters
 params = {
-    'dates[]': ['2024-02-20', '2024-02-21', '2024-02-22','2024-02-23']
+    'dates[]': ['2024-04-09']
 }
 
 # Define headers

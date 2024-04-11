@@ -1,4 +1,0 @@
-S4HcbJ009ze4FeNvCaJ0NG1xa7svOwF92Ulx3v9zc1fctUQVLSwPI4C1JpGg
-
-https://rapidapi.com/cricketapilive/api/cricbuzz-cricket
-matches/get-scorecard
