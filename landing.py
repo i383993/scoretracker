@@ -20,6 +20,9 @@ def run_code5():
 def run_code7():
     subprocess.call(["python", r"C:\Users\impan\PycharmProjects\nbaproject\Football\Football.py"])
 
+def run_code8():
+    subprocess.call(["python", r"C:\Users\impan\PycharmProjects\nbaproject\ipl\IPL.py"])
+
 def run_code6():
     webbrowser.open('http://127.0.0.1:5000')
 
@@ -40,13 +43,17 @@ button3 = QPushButton('Football Score retrieval from API')
 button3.clicked.connect(run_code3)
 layout.addWidget(button3)
 
+button5 = QPushButton('Football Score retrieval from API2')
+button5.clicked.connect(run_code7)
+layout.addWidget(button5)
+
 button4 = QPushButton('IPL Score retrieval from DB')
 button4.clicked.connect(run_code4)
 layout.addWidget(button4)
 
-button5 = QPushButton('Football Score retrieval from API')
-button5.clicked.connect(run_code7)
-layout.addWidget(button5)
+button6 = QPushButton('IPL Score retrieval from API')
+button6.clicked.connect(run_code8)
+layout.addWidget(button6)
 
 # button5 = QPushButton('Start Flask server for NBA players data retrieval')
 # button5.clicked.connect(run_code5)
